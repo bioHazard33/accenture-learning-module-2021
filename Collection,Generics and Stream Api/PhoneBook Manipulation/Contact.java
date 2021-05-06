@@ -2,7 +2,7 @@ public class Contact {
 
 	private String firstName;
 	private String lastName;
-	private longphoneNumber;
+	private long phoneNumber;
 	private String emailId;
 	public Contact(){}
 	public String getFirstName() {
