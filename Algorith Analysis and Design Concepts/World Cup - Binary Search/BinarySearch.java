@@ -33,7 +33,7 @@ class BinarySearch {
         int result = ob.binarySearch(a, 0, n - 1, x);
         int r = result + 1;
         if (result == -1) System.out.println("Score Not Found");
-        elseSystem.out.println(x + " is the score of Team " + r);
+        else System.out.println(x + " is the score of Team " + r);
       }
     }
   }
