@@ -1,4 +1,4 @@
-create table Distributor(
+create table MobileSpecification(
     Spec_No varchar(10) primary key,
     Dimension varchar(20),
     Weight varchar(20),
