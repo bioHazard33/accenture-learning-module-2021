@@ -1,5 +1,5 @@
 create table Mobile_Master(
-    IMEI_No varchar(10) primary key,
+    IME_No varchar(10) primary key,
     Model_Name varchar(20),
     Manufacturer varchar(20),
     Date_Of_Manufac Date,
