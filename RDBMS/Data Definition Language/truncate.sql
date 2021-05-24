@@ -1,0 +1,1 @@
+trucate table distributorl
