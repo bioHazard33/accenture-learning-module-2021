@@ -5,4 +5,5 @@ create table buses(
     Total_seats number(11),
     Avail_seats number(11),
     constraint pk_buses primary key(Bus_no)
+
 );
