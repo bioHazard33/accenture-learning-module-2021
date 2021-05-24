@@ -1,0 +1,1 @@
+alter table mobile_specification drop column weight;
