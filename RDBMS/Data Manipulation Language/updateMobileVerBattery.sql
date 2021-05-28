@@ -1,0 +1,1 @@
+update mobile_specification set OS='AndroidQ', Battery_life_hrs=9 where OS='Android3S';
