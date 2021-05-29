@@ -1,0 +1,1 @@
+    select distinct manufacturer from mobile_master;
