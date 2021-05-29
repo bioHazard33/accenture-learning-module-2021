@@ -5,4 +5,5 @@ select customer_id,
     email
 from customer_info
 where address in('Kolkata', 'Patna')
-order by customer_name;
+order by customer_name
+order by desc;
