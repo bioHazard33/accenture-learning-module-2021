@@ -1,1 +1,1 @@
-select customer_id,customer_name,email from customer_info where customer_name like 'R%I' order by customer_name;
+select customer_id,customer_name,email from customer_info where customer_name like 'R%l' order by customer_name;
