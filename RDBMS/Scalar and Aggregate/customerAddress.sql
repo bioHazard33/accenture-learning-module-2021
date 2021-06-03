@@ -1,0 +1,1 @@
+select initcap(customer_name) as NAME,address from customer_info where upper(address)='CHENNAI' order by NAME;
