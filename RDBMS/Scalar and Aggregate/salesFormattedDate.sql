@@ -1,0 +1,1 @@
+select salesid,to_char(sales_date,'YYYY-MM-DD') as FORMATTED_DATE from sales_info order by salesid;
