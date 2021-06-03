@@ -1,0 +1,1 @@
+select upper(customer_name) as UPPER_NAME from customer_info order by customer_name;
