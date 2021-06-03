@@ -1,0 +1,1 @@
+select manufacturer,count(*) as MOBILE_MODEL_COUNT from mobile_master group by manufacturer order by manufacturer;
