@@ -1,0 +1,1 @@
+select manufacturer,count(*) as TOTAL_COUNT from mobile_master having avg(warranty_in_years)>3 group by manufacturer;
