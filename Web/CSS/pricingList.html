@@ -1,119 +1,83 @@
 <html>
-<head></head>
+<head>
+<style>
+*{ box-sizing: border-box;}
+
+.columns{
+           float:left;
+            width: 33.3%;
+            padding: 8px;
+}
+.price { list-style-type: none;
+        border:1px solid #eee;
+        margin:0;
+        padding:0;
+        -webkit-transition:0.3s;
+        transition: 0.3s;
+}
+.price:hover{ box-shadow: 0 8px 12px 0 
+rgba(0,0,0,0.2)}
+
+.price.header{ background-color: #111;
+color:white;
+font-size: 25px;
+}
+
+.price li{ border-bottom: 1px solid #eee;
+           padding:20px;
+           text-align: center;}
+           
+.price.color{ background-color: #eee;
+font-size: 20px;}
+
+.button{ background-color: #4CAF50;
+            border:none;
+            color:white;
+            padding:10px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+}
+</style>
+</head>
 <body>
 
-	<style>
-body	{ background-color: #00CED1;
-          color: #0C1584;
-}  
-table,tr,td{ font-family: monospace;
-       font-weight: bold;
-}
-#result{ font-weight: bold;
-         color: #0000FF;}
-       
-h1{ color: #0000FF;
-    font-family: monospace;
-    text-align: center;}
-  
-  
-    </style>
-<form  onsubmit="return validate()" name="book">
-<center>
-<h1>BOOK A SHOW - TICKET BOOKING</h1>
-	<table>
-		<tr>
-		<td>Name</td>
-		<td><input type="text" name="name" placeholder="Enter the name" required>
-		     
-		</tr>
+<h2 style="text-align:center">Pricing Tables</h2>
 
-		<tr>
-			<td>Movie Name</td>
-			<td><input type="text" list="movies" name="moviename" autocomplete="on" placeholder="Movie Name" required>
-			<datalist id="movies">
-  			<option value="Irada">
-		  	<option value="Rangoon">
-  			<option value="Logan">
-  			<option value="Fist Fight">
-			</datalist>
-			</td>
-		</tr>
-		<tr>
-			<td>Circle</td>
-			<td><input type="text" list="circles" name="circle" autocomplete="on" required>
-			<datalist id="circles" name="circles">
-  			<option value="Silver">
-		  	<option value="Gold">
-  			<option value="Platinum">
-			</datalist>
-			</td>
-		</tr>
-		<tr>
-		<td>Phone no</td>
-		<td> <input type="tel" name="phone" placeholder="Enter Mobile # here" required>
-		</tr>
-		<tr>
-		<td>Show date and time</td>
-		<td><input type="date" name="showdate"></td>
-		</tr>
+<div class="columns" id="1">
+  <ul class="price">
+    <li class="header">Basic</li>
+    <li class="colour">$ 9.99 / year</li>
+    <li>10GB Storage</li>
+    <li>10 Emails</li>
+    <li>10 Domains</li>
+    <li>1GB Bandwidth</li>
+    <li class="colour"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
 
-		<tr>
-		<td>No of Adults </td>
-		<td><input type="number" name="tickets" id="tickets" min="1" max="10"></td>
-		</tr>
+<div class="columns" id="2">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Pro</li>
+    <li class="colour">$ 24.99 / year</li>
+    <li>25GB Storage</li>
+    <li>25 Emails</li>
+    <li>25 Domains</li>
+    <li>2GB Bandwidth</li>
+    <li class="colour"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
 
-		<tr>
-		<td>No of childrens </td>
-		<td><input type="number" name="childrens"  id="childrens" min="1" max="5"></td>
-		</tr>
-
-        <tr>
-		<td><button type="submit" name="Book My Show">Book My Show</button></td>
-		<td><button type="reset" name="reset">Reset</button></td>
-		</tr>
-
-        <tr>
-        <td colspan="2">
-        <div  id="result"></div>
-        </td>
-        </tr>
-
-	</table>
-	
-	<script>
-	function validate()
-	{
-		var x=document.getElementById("tickets").value;
-		var y=document.getElementById("childrens").value;
-		var date=document.book.showdate.value;
-		var currdate=new Date();
-		var curr=Date.parse(currdate.toString());
-		var bookdate=Date.parse(date);
-		var adult=x*200;
-		var childern=y*100;
-		var total=adult+childern;
-
-		if(bookdate<curr)
-		{
-		alert("Show date and time should be either current date or future date");
-	    return false;
-		}
-		if(y>=x)
-		{
- 		 alert("No of tickets should be greater than the no of children");
-	return false;
-
-		}
-		if(y<x)
-		{
-		document.getElementById("result").innerHTML="Your approximate ticket amount is "+total+" INR";
-	    return false;
-
-		}
-		}
-	</script>
-	</center>
-</form>
+<div class="columns" id="3">
+  <ul class="price">
+    <li class="header">Premium</li>
+    <li class="colour">$ 49.99 / year</li>
+    <li>50GB Storage</li>
+    <li>50 Emails</li>
+    <li>50 Domains</li>
+    <li>5GB Bandwidth</li>
+    <li class="colour"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
 </body>
 </html>
