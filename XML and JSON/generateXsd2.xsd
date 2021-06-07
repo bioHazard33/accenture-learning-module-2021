@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<element name="hotels">
+		<complexType>
+			<sequence>
+				<element maxOccurs="unbounded" name="hotel">
+					<complexType>
+						<sequence>
+							<element name="ID" type="xs:unsignedByte" />
+							<element name="Name" type="xs:string" />
+							<element name="Stars" type="xs:unsignedByte" />
+							<element name="Facilities" type="xs:string" />
+							<element name="Address" type="xs:string" />
+							<element name="Type" type="xs:string" />
+							<element name="Available" type="xs:boolean" />
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
