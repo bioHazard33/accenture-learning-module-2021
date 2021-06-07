@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<element name="StudentList">
+		<complexType>
+			<sequence>
+				<element maxOccurs="unbounded" name="Student">
+					<complexType>
+						<sequence>
+							<element name="name">
+								<complexType>
+									<sequence>
+										<element name="firstname" type="xs:string" />
+										<element minOccurs="0" name="lastname" type="xs:string" />
+									</sequence>
+								</complexType>
+							</element>
+							<element name="age" type="xs:unsignedByte" />
+							<element name="address">
+								<complexType>
+									<sequence>
+										<element name="doorno" type="xs:unsignedByte" />
+										<element name="street" type="xs:string" />
+										<element name="city" type="xs:string" />
+										<element name="pincode" type="xs:unsignedInt" />
+									</sequence>
+								</complexType>
+							</element>
+							<element name="department" type="xs:string" />
+						</sequence>
+						<attribute name="rollno" type="xs:string" use="required" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
