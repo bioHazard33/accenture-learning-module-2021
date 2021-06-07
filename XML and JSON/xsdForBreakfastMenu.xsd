@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<element name="breakfast_menu">
+		<complexType>
+			<sequence>
+				<element maxOccurs="unbounded" name="food">
+					<complexType>
+						<sequence>
+							<element name="name" type="xs:string" />
+							<element name="price" type="xs:string" />
+							<element name="description" type="xs:string" />
+							<element name="calories" type="xs:unsignedShort" />
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
