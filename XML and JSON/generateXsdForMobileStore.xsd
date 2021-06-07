@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<element name="mobilestore">
+		<complexType>
+			<sequence>
+				<element maxOccurs="unbounded" name="mobile">
+					<complexType>
+						<sequence>
+							<element name="brand" type="xs:string" />
+							<element name="os" type="xs:string" />
+							<element name="model" type="xs:string" />
+							<element name="ram" type="xs:string" />
+							<element name="internal" type="xs:string" />
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
