@@ -38,7 +38,7 @@ public class Main {
           System.out.println("Address:" + obj1.getAddress());
         }
       }
-      if (n == 4) {
+      if (n == 4){
         System.exit(0);
       }
     }
